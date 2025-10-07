@@ -4,3 +4,25 @@ Faça um programa para o cálculo de uma folha de pagamento, sabendo que os desc
 Desconto do IR: - Salário Bruto até 900 (inclusive) - isento - Salário Bruto até 1500 (inclusive) - desconto de 5% - Salário Bruto até 2500 (inclusive) - desconto de 10% - Salário Bruto acima de 2500 - desconto de 20%
 
 Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.'''
+
+
+valorHora = float(input("Quanto recebe por hora: "))
+quantH = float(input("Quantas horas trabalhou esse mês: "))
+
+salarioB = valorHora * quantH
+
+if (salarioB <= 900):
+    desc = 0
+elif (salarioB <= 1500):
+    desc = 5
+elif (salarioB <= 2500):
+    desc = 10
+else:
+    desc = 20
+
+salarioL = salarioB - (salarioB*desc/100)
+
+print(f"O valor da hora é {valorHora} e a quantidade de hora é {quantH}")
+print(f"Salario Bruto: {salarioB}")
+print(f"Desconto: {desc}%")
+print(f"Salario novo: {salarioL}")

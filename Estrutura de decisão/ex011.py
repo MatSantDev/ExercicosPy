@@ -10,3 +10,19 @@ o percentual de aumento aplicado;
 o valor do aumento;
 o novo salário, após o aumento.'''
 
+salario = float(input("Quanto recebe: "))
+perc = 0
+
+if salario <= 280: 
+    perc = 0.2 
+elif salario <= 700:
+    perc = 0.15
+elif salario <= 1500:
+    perc = 0.1
+else:
+    perc = 0.05
+
+print(f"o salário antes do reajuste: {salario}")
+print(f"o percentual de aumento aplicado: {perc*100}")
+print(f"o valor do aumento: {salario*perc}")
+print(f"Novo salario: {salario+salario*perc}")
